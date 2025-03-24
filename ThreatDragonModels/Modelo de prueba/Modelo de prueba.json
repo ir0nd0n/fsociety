@@ -1,0 +1,30 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Modelo de prueba",
+    "owner": "Iza",
+    "description": "Esto es un modelo de pruebas",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "david"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Nuevo diagrama STRIDE",
+        "diagramType": "STRIDE",
+        "placeholder": "Descripción de nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Edg",
+    "threatTop": 0
+  }
+}
