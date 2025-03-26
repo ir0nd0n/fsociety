@@ -441,8 +441,8 @@
                 "text": "Sistema 2FA"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -538,12 +538,34 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "83e3245a-7bfa-4bd3-bddc-f7e2c0420fc4",
+                  "title": "Denial of Service (DoS)",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Limitar intentos de autenticación, protección contra bots y ataques de fuerza bruta",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -676,8 +698,8 @@
                 "text": "Error"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -773,12 +795,41 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c2c354b0-aa01-4b2f-9a09-fe4f32f83c1f",
+                  "title": "Elevación de privilegios ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Mostrar mensajes genéricos (\"Credenciales inválidas\") en lugar de especificar si el usuario existe o no",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -982,12 +1033,194 @@
               "cell": "9603ef2a-7d2c-49db-a225-f52ff1140773",
               "port": "f44a6c90-01b9-4cda-aa0e-e81fa53fc487"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "envía código al usuario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "envía código al usuario"
+            ],
+            "id": "dfbc56c3-2e20-4260-84b5-98e3b329eae4",
+            "source": {
+              "x": 380,
+              "y": 370
+            },
+            "target": {
+              "cell": "d9006e56-4348-4130-a35e-f7e271c47d5d",
+              "port": "cf089f75-3a29-437f-85fe-954567d2855d"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "envía código 2FA",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "envía código 2FA"
+            ],
+            "id": "40f43b19-650f-4367-9ec4-05017efd179e",
+            "source": {
+              "x": 180,
+              "y": 240
+            },
+            "target": {
+              "x": 380,
+              "y": 420
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "si es exitoso",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "si es exitoso"
+            ],
+            "id": "0c2b689d-33ed-4828-8217-3ce04d542222",
+            "source": {
+              "x": 500,
+              "y": 369
+            },
+            "target": {
+              "cell": "827991a9-630b-4086-86d4-fd0e5ff00521",
+              "port": "304dc6ab-a4d9-4f0e-b608-ee36824ede66"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "si falla",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "si falla"
+            ],
+            "id": "15260558-d42b-4397-8a49-acf8df5b9c30",
+            "source": {
+              "cell": "ff9326de-ca31-4b17-94fe-65f8296cde89",
+              "port": "f44a6c90-01b9-4cda-aa0e-e81fa53fc487"
+            },
+            "target": {
+              "cell": "f0448744-2586-49e8-a226-f4d95a1acdfd",
+              "port": "c74043a1-5429-4f4e-9c1a-33b56e57d82d"
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Edg",
-    "threatTop": 5
+    "threatTop": 7
   }
 }
